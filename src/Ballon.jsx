@@ -15,7 +15,7 @@ const Balloon = ({ color, delay }) => {
       style={{
         position: "absolute",
         bottom: 0,
-        left: `${Math.random() * 90}vw`,
+        left: `${Math.random() * 100}vw`,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

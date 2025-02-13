@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "./Candle.css"; // Import CSS file
+import "./Candle.css";
 
-const Candle = () => {
+const Candle = ({ onBlow }) => {
   const [blow, setblow] = useState(false);
 
   return (
-    <div className="candle-container">
+    <motion.div
+    onHoverStart={onBlow}
+    initial={{y:-500,}}
+    transition={{duration: 1}}
+    animate={{y:0}}
+     className="candle-container">
       <div className="candle" onMouseEnter={() => setblow(true)}>
         <div className="wick" onMouseEnter={() => setblow(true)}></div>
 
@@ -26,7 +31,7 @@ const Candle = () => {
           />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

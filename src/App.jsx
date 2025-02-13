@@ -11,6 +11,7 @@ import HappyBirthdayBanner from "./Bletter";
 import Bg from "./Background";
 import Card from "./Card";
 import Surprise from "./components/Surprise";
+import Gift from "./components/Gift";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
           {/* Special route for surprise */}
           <Route path="/special" element={<Surprise />} />
+          <Route path="/gift" element={<Gift />} />
 
           {/* Other test routes */}
           {/* <Route path="/test" element={<Test />} /> */}

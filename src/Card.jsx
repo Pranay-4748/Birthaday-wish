@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-// import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 function Card() {
-  // const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate(); 
   const msg = [
     "It's Your Special Day yeyey ! ",
     "I made something special because you are special to me ! ",
@@ -53,7 +53,7 @@ function Card() {
         >
           <button
             className="ybtn bg-green-500 text-white rounded-full shadow-md cursor-pointer hover:bg-green-600"
-            onClick={() => navigate("/surprise")}
+            onClick={() => navigate("/special")}
           >
             Yes
           </button>
