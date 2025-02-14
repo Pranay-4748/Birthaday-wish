@@ -15,7 +15,7 @@ function Gift() {
           have made something for u 
           <br />
           <br />
-          <a href="https://birthday-rashmi.netlify.app">https://birthday-rashmi.netlify.app</a>
+          {/* <a href="https://birthday-rashmi.netlify.app">https://birthday-rashmi.netlify.app</a> */}
         </p>
       </div>
     </div>
