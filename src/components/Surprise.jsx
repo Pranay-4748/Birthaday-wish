@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Balloons from "../Ballon";
 import Candle from "../Candle";
 import { useNavigate } from "react-router-dom";
-import cake from "../assets/cake.png"
+import cake from "../assets/cake.png";
 
 function Surprise() {
   const [lightOn, setlightOn] = useState(false);
@@ -17,22 +17,15 @@ function Surprise() {
 
   const handleClick = () => {
     if (blowCandle) {
-      navigate("/gift"); // Change route when surprise gift is ready
+      navigate("/gift"); // Navigate to gift page
       return;
     }
-    if (!lightOn) {
-      setlightOn(true);
-    } else if (!banner) {
-      setbanner(true);
-    } else if (!showBalloons) {
-      setShowBalloons(true);
-    } else if (!playMusic) {
-      setPlayMusic(true);
-    } else if (!showCake) {
-      setShowCake(true);
-    } else if (!showcandle) {
-      setshowcandle(true);
-    }
+    if (!lightOn) setlightOn(true);
+    else if (!banner) setbanner(true);
+    else if (!showBalloons) setShowBalloons(true);
+    else if (!playMusic) setPlayMusic(true);
+    else if (!showCake) setShowCake(true);
+    else if (!showcandle) setshowcandle(true);
   };
 
   useEffect(() => {
@@ -44,7 +37,7 @@ function Surprise() {
 
   return (
     <motion.div
-      className="surprise"
+      className="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
       animate={{
         backgroundColor: lightOn ? "#dff1fb" : "#242424",
         color: lightOn ? "black" : "white",
@@ -54,39 +47,37 @@ function Surprise() {
       {banner && (
         <motion.img
           src="/Banner.png"
-          className="w-60 h-40 absolute object-contain"
+          className="absolute top-5 max-w-[80vw] h-auto object-contain"
           initial={{ y: -1500, opacity: 0 }}
-          animate={{ y: -500, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           loading="lazy"
         />
       )}
 
-      {showBalloons && <Balloons />} 
-
+      {showBalloons && <Balloons />}  
 
       {showCake && (
         <motion.img
           src={cake}
-          className="w-30 h-30 absolute z-10"
-          initial={{ x: "-100vw", y: -160 }}
-          animate={{ x: 0, y: -160 }}
+          className="absolute w-40 h-auto bottom-10"
+          initial={{ y: "100vh" }}
+          animate={{ y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
       )}
 
-      {showcandle && <Candle  onBlow={() => setBlowCandle(true)} />}
+      {showcandle && <Candle onBlow={() => setBlowCandle(true)} />}
 
       <motion.button
         type="button"
-        className="dbtn rounded-full absolute z-10"
-        initial={{ y: -100, opacity: 0 }}
+        className="relative px-6 py-3 text-lg sm:text-xl rounded-full bg-blue-600 text-white mt-5 shadow-md"
+        initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         onClick={handleClick}
-        whileHover={{ outline: "1px solid #535bf2" }}
-        whileTap={{ scale: 0.99 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        {/* {lightOn ? (banner ? "Fly Balloons" : "Decorate") : "Let's Turn On the Lights"} */}
         {blowCandle
           ? "Surprise Gift for You"
           : lightOn
