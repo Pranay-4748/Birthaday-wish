@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Balloons from "../Ballon";
-import sound from "/music.mp3";
 import Candle from "../Candle";
 import { useNavigate } from "react-router-dom";
 import cake from "../assets/cake.png"

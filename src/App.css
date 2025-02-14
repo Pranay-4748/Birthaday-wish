@@ -63,3 +63,15 @@
   align-items: end;
   justify-content: center;
 }
+
+.item{
+  /* position: absolute; */
+  padding: 10px;
+  width: 90%;
+  border-radius: 5px;
+  height: 300px;
+  background-color: aliceblue;
+  z-index: 2;
+  color: black;
+  box-shadow: 3px 4px 15px black;
+}
