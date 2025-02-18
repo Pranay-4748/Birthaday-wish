@@ -27,7 +27,8 @@ function App() {
 
           {/* Special route for surprise */}
           <Route path="/special" element={<Surprise />} />
-          <Route path="/gift" element={<><Gift1 /><Gift2/><Gift3/></>} />
+          <Route path="/gift" element={<Gift/>} />
+          <Route path="/surprise" element={<><Gift1/><Gift2/><Gift3/></>} />
 
           {/* Other test routes */}
           {/* <Route path="/test" element={<Test />} /> */}

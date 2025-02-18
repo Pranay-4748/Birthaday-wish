@@ -69,7 +69,7 @@ function Surprise() {
         <motion.img
           src={cake}
           className="w-30 h-30 absolute z-10"
-          initial={{ x: "-100%", y: "-100%" }}
+          initial={{ x: "-1000%", y: "-150%" }}
           animate={{ x: "-0%", y: "-150%" }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
