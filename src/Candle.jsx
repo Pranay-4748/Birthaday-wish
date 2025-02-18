@@ -7,7 +7,7 @@ const Candle = ({ onBlow }) => {
 
   return (
     <motion.div
-    onHoverStart={onBlow}
+    onTap={onBlow}
     initial={{y:-500,}}
     transition={{duration: 1}}
     animate={{y:0}}

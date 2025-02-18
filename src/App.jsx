@@ -12,6 +12,10 @@ import Bg from "./Background";
 import Card from "./Card";
 import Surprise from "./components/Surprise";
 import Gift from "./components/Gift";
+import Gift1 from "./components/Gift1";
+import Gift2 from "./components/Gift2";
+import Gift3 from "./components/Gift3";
+import Gift4 from "./components/Gift4";
 
 function App() {
   return (
@@ -23,7 +27,7 @@ function App() {
 
           {/* Special route for surprise */}
           <Route path="/special" element={<Surprise />} />
-          <Route path="/gift" element={<Gift />} />
+          <Route path="/gift" element={<><Gift1 /><Gift2/><Gift3/></>} />
 
           {/* Other test routes */}
           {/* <Route path="/test" element={<Test />} /> */}

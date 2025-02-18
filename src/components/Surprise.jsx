@@ -69,8 +69,8 @@ function Surprise() {
         <motion.img
           src={cake}
           className="w-30 h-30 absolute z-10"
-          initial={{ x: "-100vw", y: -160 }}
-          animate={{ x: 0, y: -160 }}
+          initial={{ x: "-100%", y: "-100%" }}
+          animate={{ x: "-0%", y: "-150%" }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
       )}
@@ -94,7 +94,7 @@ function Surprise() {
             ? showBalloons
               ? playMusic
                 ? showCake
-                  ? "Get a candle blow by touching it"
+                  ? "Get a candle blow by clicking it"
                   : "Birthday Cake"
                 : "Play Music"
               : "Fly Balloons"
