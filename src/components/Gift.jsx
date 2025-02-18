@@ -16,7 +16,7 @@ function Gift() {
           <br />
           <br />
           <p>Click Below Link To See</p>
-          <a href="https://birthdaywishp.netlify.app/surprise">https://birthdaywishp.netlify.app/surprise</a>
+          <a href="http://birthdaywishp.netlify.app/surprise">http://birthdaywishp.netlify.app/surprise</a>
         </p>
       </div>
     </div>
